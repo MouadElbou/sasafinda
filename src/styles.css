@@ -4,8 +4,72 @@
     height: 100%;
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    overflow: hidden;
+    background: transparent !important;
+
+  }
+  .mat-app-background {
+    background-color: transparent !important;
   }
 
-  .mat-app-background {
-    background-color: #ffffff;
+:root {
+  --background-color: #f8f9fa;
+  --primary-color: #2c3e50;
+  --accent-color: #3498db;
+  --text-color: #333;
+  --card-background: #fff;
+  --sidenav-background: #fff;
+  --header-background: #fff;
+  --border-color: rgba(0, 0, 0, 0.12);
+  --hover-background: rgba(0, 0, 0, 0.04);
+  --mat-table-background: #fff;
+  --mat-table-color: #333;
+}
+
+.dark-theme {
+  --background-color: #121212;
+  --primary-color: #bb86fc;
+  --accent-color: #03dac6;
+  --text-color: #ffffff;
+  --card-background: #1e1e1e;
+  --sidenav-background: #1e1e1e;
+  --header-background: #1e1e1e;
+  --border-color: rgba(255, 255, 255, 0.12);
+  --hover-background: rgba(255, 255, 255, 0.08);
+  --mat-table-background: #1e1e1e;
+  --mat-table-color: #ffffff;
+  
+  /* Form controls */
+  --mat-select-text: #ffffff;
+  --mat-option-text: #ffffff;
+  --mat-form-field-text: #ffffff;
+  
+  .mat-select-value,
+  .mat-select-arrow,
+  .mat-option-text {
+    color: var(--text-color) !important;
   }
+  
+  .mat-form-field-label {
+    color: var(--text-color) !important;
+  }
+}
+
+/* Material Select Overrides */
+
+body {
+  margin: 0;
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  transition: all 0.3s ease;
+}
+
+.mat-mdc-table {
+  background-color: var(--mat-table-background) !important;
+  color: var(--mat-table-color) !important;
+}
+
+.mat-mdc-card {
+  background-color: var(--card-background) !important;
+  color: var(--text-color) !important;
+}

@@ -1,0 +1,210 @@
+{ "cashDesk": {
+    "title": "Gestion de Caisse",
+    "search": {
+      "label": "Rechercher des Transactions",
+      "placeholder": "Rechercher par type, description..."
+    },
+    "filterByDate": "Filtrer par date",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "printReport": "Imprimer Rapport",
+    "currentBalance": "Solde Actuel",
+    "columns": {
+      "date": "Date",
+      "type": "Type",
+      "description": "Description",
+      "amount": "Montant"
+    },
+    "transactionTypes": {
+      "income": "Entrée",
+      "expense": "Sortie"
+    }
+  },
+  "purchase": {
+    "form": {
+      "edit": "Modifier l'Achat",
+      "new": "Nouvel Achat",
+      "date": "Date",
+      "description": "Description",
+      "status": "Statut",
+      "paymentMethod": "Mode de Paiement",
+      "items": {
+        "title": "Articles",
+        "name": "Nom",
+        "quantity": "Quantité",
+        "price": "Prix",
+        "add": "Ajouter un Article"
+      },
+      "update": "Mettre à jour l'Achat",
+      "create": "Créer l'Achat"
+    }, 
+    "status": {
+      "pending": "pending",
+      "completed": "completed",
+      "cancelled": "cancelled"
+    },
+    "title": "Gestion des Achats",
+    "search": {
+      "label": "Rechercher des Achats",
+      "placeholder": "Rechercher par description, date, statut..."
+    },
+    "filterByDate": "Filtrer par date",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "printAll": "Imprimer Tous les Achats",
+    "newPurchase": "Nouvel Achat",
+    "columns": {
+      "date": "Date",
+      "description": "Description",
+      "paymentMethod": "Mode de Paiement",
+      "items": "Articles",
+      "total": "Total",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "actions": {
+      "print": "Imprimer Achat",
+      "view": "Voir Achat",
+      "delete": "Supprimer Achat"
+    }
+  },
+  "customers": {
+    "form": {
+      "edit": "Modifier le Client",
+      "new": "Nouveau Client",
+      "type": "Type",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "cin": "CIN",
+      "companyName": "Nom de l'entreprise",
+      "contactPerson": "Personne à contacter",
+      "taxNumber": "Numéro fiscal",
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse",
+      "update": "Mettre à jour le Client",
+      "create": "Créer le Client"
+    },
+    "type": {
+      "person": "Personne",
+      "company": "Entreprise"
+    },
+    "title": "Gestion des Clients",
+    "newCustomer": "Nouveau Client",
+    "search": {
+      "label": "Rechercher des clients",
+      "placeholder": "Rechercher par nom, email, téléphone..."
+    },
+    "tabs": {
+      "individual": "Clients Particuliers",
+      "company": "Clients Entreprises"
+    },
+    "columns": {
+      "name": "Nom",
+      "cin": "CIN",
+      "phone": "Téléphone",
+      "email": "Email",
+      "actions": "Actions",
+      "companyName": "Nom de l'entreprise",
+      "ice": "ICE",
+      "contactPerson": "Personne à contacter"
+    },
+    "actions": {
+      "edit": "Modifier Client",
+      "delete": "Supprimer Client"
+    }
+  },
+  "orders": {
+    "form": {
+      "edit": "Modifier la Commande",
+      "new": "Nouvelle Commande",
+      "customer": "Client",
+      "date": "Date",
+      "description": "Description",
+      "status": "Statut",
+      "paymentMethod": "Mode de Paiement",
+      "items": {
+        "title": "Articles",
+        "name": "Nom",
+        "quantity": "Quantité",
+        "price": "Prix",
+        "add": "Ajouter un Article"
+      },
+      "update": "Mettre à jour la Commande",
+      "create": "Créer la Commande"
+    },
+    "status": {
+      "completed": "completed",
+      "pending": "pending",
+      "cancelled": "cancelled"
+    },
+    "title": "Gestion des Commandes",
+    "searchPlaceholder": "Rechercher des Commandes",
+    "searchHint": "Rechercher par client, date, statut...",
+    "filterByDate": "Filtrer par date",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "printAll": "Imprimer Toutes les Commandes",
+    "newOrder": "Nouvelle Commande",
+    "individualOrders": "Commandes Individuelles",
+    "companyOrders": "Commandes Entreprises",
+    "columns": {
+      "date": "Date",
+      "customer": "Client",
+      "paymentMethod": "Mode de Paiement",
+      "items": "Articles",
+      "description": "Description",
+      "total": "Total",
+      "status": "Statut",
+      "actions": "Actions",
+      "company": "Entreprise"
+    },
+    "actions": {
+      "print": "Imprimer Facture",
+      "view": "Voir Commande",
+      "delete": "Supprimer Commande"
+    }
+  },
+  "common": {
+    "cancel": "Annuler"
+  },"sidebar": {
+  "dashboard": "dashboard",
+  "orders": "Commandes",
+  "customers": "Clients",
+  "purchase": "Achats",
+  "cashDesk": "Caisse",
+  "settings": "Paramètres"
+},
+  "dashboard": {
+    "title": "Tableau de Bord",
+    "todayRevenue": "Revenu du Jour",
+    "activeOrders": "Commandes Actives",
+    "totalCustomers": "Clients Totaux",
+    "revenueTrend": "Tendance des Revenus"
+
+  },
+  
+  "settings": {
+    "title": "Paramètres",
+    "language": {
+      "title": "Langue",
+      "select": "Sélectionner la langue",
+      "english": "Anglais",
+      "french": "Français", 
+      "arabic": "Arabe"
+    },
+    "appearance": {
+      "title": "Apparence",
+      "darkMode": "Mode sombre"
+    },
+    "account": {
+      "title": "Compte",
+      "changePassword": "Changer le mot de passe"
+    },
+    "backup": {
+      "title": "Sauvegarde",
+      "export": "Exporter la base de données",
+      "import": "Importer la base de données"
+    }
+  }}
+

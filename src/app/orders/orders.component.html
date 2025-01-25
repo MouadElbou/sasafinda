@@ -1,0 +1,175 @@
+  <div class="orders-container">
+    <div class="header-section">
+      <h1>{{ 'orders.title' | translate }}</h1>
+      <div class="header-actions">
+        <mat-form-field class="search-field">
+          <mat-label>{{ 'orders.searchPlaceholder' | translate }}</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="{{ 'orders.searchHint' | translate }}" #input>
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="date-filter">
+          <mat-label>{{ 'orders.filterByDate' | translate }}</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="{{ 'orders.startDate' | translate }}" (dateChange)="onDateFilterChange($event, 'start')">
+            <input matEndDate placeholder="{{ 'orders.endDate' | translate }}" (dateChange)="onDateFilterChange($event, 'end')">
+          </mat-date-range-input>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+        <button mat-raised-button class="print-all-button" (click)="printAllOrders()">
+          <mat-icon>print</mat-icon>
+          {{ 'orders.printAll' | translate }}
+        </button>
+        <button mat-raised-button class="add-button" (click)="openOrderForm()">
+          <mat-icon>add_circle</mat-icon>
+          {{ 'orders.newOrder' | translate }}
+        </button>
+      </div>
+    </div>
+    <mat-card class="main-card">
+      <mat-tab-group animationDuration="200ms">
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">person</mat-icon>
+            {{ 'orders.individualOrders' | translate }}
+          </ng-template>
+  
+          <div class="table-container">
+            <table mat-table [dataSource]="personOrdersDataSource">
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef style="width: 15%">{{ 'orders.columns.date' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.date | date}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="customer">
+                <th mat-header-cell *matHeaderCellDef style="width: 25%">{{ 'orders.columns.customer' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.customerName}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="payment_method">
+                <th mat-header-cell *matHeaderCellDef>{{ 'orders.columns.paymentMethod' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.payment_method}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="items">
+                <th mat-header-cell *matHeaderCellDef style="width: 10%">{{ 'orders.columns.items' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.items.length}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef>{{ 'orders.columns.description' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.description}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="total">
+                <th mat-header-cell *matHeaderCellDef style="width: 15%">{{ 'orders.columns.total' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.total}} DH</td>
+              </ng-container>
+
+              <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef style="width: 15%">{{ 'orders.columns.status' | translate }}</th>
+                <td mat-cell *matCellDef="let order">
+                  <span class="status-badge" [class]="order.status">{{order.status}}</span>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef>{{ 'orders.columns.actions' | translate }}</th>
+                <td mat-cell *matCellDef="let order">
+                  <div class="action-buttons">
+                    <button mat-icon-button class="pdf-button" (click)="printBill(order)" matTooltip="{{ 'orders.actions.print' | translate }}">
+                      <mat-icon>receipt</mat-icon>
+                    </button>
+                    <button mat-icon-button class="view-button" (click)="viewOrder(order)" matTooltip="{{ 'orders.actions.view' | translate }}">
+                      <mat-icon>visibility</mat-icon>
+                    </button>
+                    <button mat-icon-button class="delete-button" (click)="deleteOrder(order)" matTooltip="{{ 'orders.actions.delete' | translate }}">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </div>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator #personPaginator
+              [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              showFirstLastButtons>
+            </mat-paginator>
+          </div>
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">business</mat-icon>
+            {{ 'orders.companyOrders' | translate }}
+          </ng-template>
+  
+          <div class="table-container">
+            
+            <table mat-table [dataSource]="companyOrdersDataSource">
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef style="width: 15%">{{ 'orders.columns.date' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.date | date}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="company">
+                <th mat-header-cell *matHeaderCellDef style="width: 25%">{{ 'orders.columns.company' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.companyName}}</td>
+              </ng-container>
+              <ng-container matColumnDef="payment_method">
+                <th mat-header-cell *matHeaderCellDef>{{ 'orders.columns.paymentMethod' | translate }}</th>
+                <td mat-cell *matCellDef="let order">
+                  <span class="payment-badge">{{order.payment_method}}</span>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="items">
+                <th mat-header-cell *matHeaderCellDef style="width: 5%">{{ 'orders.columns.items' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.items.length}}</td>
+              </ng-container>
+              <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef>{{ 'orders.columns.description' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.description}}</td>
+              </ng-container>
+              <ng-container matColumnDef="total">
+                <th mat-header-cell *matHeaderCellDef style="width: 15%">{{ 'orders.columns.total' | translate }}</th>
+                <td mat-cell *matCellDef="let order">{{order.total}} DH</td>
+              </ng-container>
+              <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef style="width: 15%">{{ 'orders.columns.status' | translate }}</th>
+                <td mat-cell *matCellDef="let order">
+                  <span class="status-badge" [class]="order.status">{{order.status}}</span>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef style="width: 20%">{{ 'orders.columns.actions' | translate }}</th>
+                <td mat-cell *matCellDef="let order">
+                  <div class="action-buttons">
+                    <button mat-icon-button class="pdf-button" (click)="printBill(order)" matTooltip="{{ 'orders.actions.print' | translate }}">
+                      <mat-icon>receipt</mat-icon>
+                    </button>
+                    <button mat-icon-button class="view-button" (click)="viewOrder(order)" matTooltip="{{ 'orders.actions.view' | translate }}">
+                      <mat-icon>visibility</mat-icon>
+                    </button>
+                    <button mat-icon-button class="delete-button" (click)="deleteOrder(order)" matTooltip="{{ 'orders.actions.delete' | translate }}">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </div>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="companyDisplayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: companyDisplayedColumns;"></tr>
+            </table>
+            <mat-paginator #companyPaginator
+              [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              showFirstLastButtons>
+            </mat-paginator>
+          </div>
+        </mat-tab>
+      </mat-tab-group>

@@ -1,0 +1,210 @@
+{
+  "cashDesk": {
+    "title": "Cash Desk Management",
+    "search": {
+      "label": "Search Transactions",
+      "placeholder": "Search by type, description..."
+    },
+    "filterByDate": "Filter by date",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "printReport": "Print Report",
+    "currentBalance": "Current Balance",
+    "columns": {
+      "date": "Date",
+      "type": "Type",
+      "description": "Description",
+      "amount": "Amount"
+    },
+    "transactionTypes": {
+      "income": "Income",
+      "expense": "Expense"
+    }
+  },
+  "purchase": {
+    "form": {
+      "edit": "Edit Purchase",
+      "new": "New Purchase",
+      "date": "Date",
+      "description": "Description",
+      "status": "Status",
+      "paymentMethod": "Payment Method",
+      "items": {
+        "title": "Items",
+        "name": "Name",
+        "quantity": "Quantity", 
+        "price": "Price",
+        "add": "Add Item"
+      },
+      "update": "Update Purchase",
+      "create": "Create Purchase"
+    }, 
+    "status": {
+      "pending": "pending",
+      "completed": "completed",
+      "cancelled": "cancelled"
+    },
+    "title": "Purchases Management",
+    "search": {
+      "label": "Search Purchases",
+      "placeholder": "Search by description, date, status..."
+    },
+    "filterByDate": "Filter by date",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "printAll": "Print All Purchases",
+    "newPurchase": "New Purchase",
+    "columns": {
+      "date": "Date",
+      "description": "Description",
+      "paymentMethod": "Payment Method",
+      "items": "Items",
+      "total": "Total",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "actions": {
+      "print": "Print Purchase",
+      "view": "View Purchase",
+      "delete": "Delete Purchase"
+    }
+  },
+  "customers": {
+    "form": {
+      "edit": "Edit Customer",
+      "new": "New Customer",
+      "type": "Type",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "cin": "CIN",
+      "companyName": "Company Name",
+      "contactPerson": "Contact Person",
+      "taxNumber": "Tax Number",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "update": "Update Customer",
+      "create": "Create Customer"
+    },
+    "type": {
+      "person": "Person",
+      "company": "Company"
+    },
+    "title": "Customer Management",
+    "newCustomer": "New Customer",
+    "search": {
+      "label": "Search customers",
+      "placeholder": "Search by name, email, phone..."
+    },
+    "tabs": {
+      "individual": "Individual Customers",
+      "company": "Company Customers"
+    },
+    "columns": {
+      "name": "Name",
+      "cin": "CIN",
+      "phone": "Phone",
+      "email": "Email",
+      "actions": "Actions",
+      "companyName": "Company Name",
+      "ice": "ICE",
+      "contactPerson": "Contact Person"
+    },
+    "actions": {
+      "edit": "Edit Customer",
+      "delete": "Delete Customer"
+    }
+  },
+  "orders": {
+    "form": {
+      "edit": "Edit Order",
+      "new": "New Order",
+      "customer": "Customer",
+      "date": "Date",
+      "description": "Description",
+      "status": "Status",
+      "paymentMethod": "Payment Method",
+      "items": {
+        "title": "Items",
+        "name": "Name",
+        "quantity": "Quantity",
+        "price": "Price",
+        "add": "Add Item"
+      },
+      "update": "Update Order",
+      "create": "Create Order"
+    },
+    "status": {
+      "completed": "Completed",
+      "pending": "Pending",
+      "cancelled": "Cancelled"
+    },
+    "title": "Orders Management",
+    "searchPlaceholder": "Search Orders",
+    "searchHint": "Search by customer, date, status...",
+    "filterByDate": "Filter by date",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "printAll": "Print All Orders",
+    "newOrder": "New Order",
+    "individualOrders": "Individual Orders",
+    "companyOrders": "Company Orders",
+    "columns": {
+      "date": "Date",
+      "customer": "Customer",
+      "paymentMethod": "Payment Method",
+      "items": "Items",
+      "description": "Description",
+      "total": "Total",
+      "status": "Status",
+      "actions": "Actions",
+      "company": "Company"
+    },
+    "actions": {
+      "print": "Print Bill",
+      "view": "View Order",
+      "delete": "Delete Order"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "customers": "Customers",
+    "purchase": "Purchase",
+    "cashDesk": "Cash Desk",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "todayRevenue": "Today's Revenue",
+    "activeOrders": "Active Orders",
+    "totalCustomers": "Total Customers",
+    "revenueTrend": "Revenue Trend"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": {
+      "title": "Language",
+      "select": "Select Language",
+      "english": "English",
+      "french": "French",
+      "arabic": "Arabic"
+    },
+    "appearance": {
+      "title": "Appearance",
+      "darkMode": "Dark Mode"
+    },
+    "account": {
+      "title": "Account",
+      "changePassword": "Change Password"
+    },
+    "backup": {
+      "title": "Backup",
+      "export": "Export Database",
+      "import": "Import Database"
+    }
+  },
+  "common": {
+    "cancel": "Cancel"
+  }
+}

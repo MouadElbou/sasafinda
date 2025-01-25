@@ -1,0 +1,210 @@
+{
+  "cashDesk": {
+    "title": "إدارة الصندوق",
+    "search": {
+      "label": "البحث في المعاملات",
+      "placeholder": "البحث حسب النوع، الوصف..."
+    },
+    "filterByDate": "تصفية حسب التاريخ",
+    "startDate": "تاريخ البداية",
+    "endDate": "تاريخ النهاية",
+    "printReport": "طباعة التقرير",
+    "currentBalance": "الرصيد الحالي",
+    "columns": {
+      "date": "التاريخ",
+      "type": "النوع",
+      "description": "الوصف",
+      "amount": "المبلغ"
+    },
+    "transactionTypes": {
+      "income": "دخل",
+      "expense": "مصروف"
+    }
+  },
+  "purchase": {
+    "form": {
+      "edit": "تعديل المشتريات",
+      "new": "مشتريات جديدة",
+      "date": "التاريخ",
+      "description": "الوصف",
+      "status": "الحالة",
+      "paymentMethod": "طريقة الدفع",
+      "items": {
+        "title": "العناصر",
+        "name": "الاسم",
+        "quantity": "الكمية",
+        "price": "السعر",
+        "add": "إضافة عنصر"
+      },
+      "update": "تحديث المشتريات",
+      "create": "إنشاء المشتريات"
+    },
+    "status": {
+      "pending": "pending",
+      "completed": "completed",
+      "cancelled": "cancelled"
+    },
+    "title": "إدارة المشتريات",
+    "search": {
+      "label": "البحث في المشتريات",
+      "placeholder": "البحث حسب الوصف، التاريخ، الحالة..."
+    },
+    "filterByDate": "تصفية حسب التاريخ",
+    "startDate": "تاريخ البداية",
+    "endDate": "تاريخ النهاية",
+    "printAll": "طباعة جميع المشتريات",
+    "newPurchase": "شراء جديد",
+    "columns": {
+      "date": "التاريخ",
+      "description": "الوصف",
+      "paymentMethod": "طريقة الدفع",
+      "items": "العناصر",
+      "total": "المجموع",
+      "status": "الحالة",
+      "actions": "الإجراءات"
+    },
+    "actions": {
+      "print": "طباعة الشراء",
+      "view": "عرض الشراء",
+      "delete": "حذف الشراء"
+    }
+  },
+  "customers": {
+    "form": {
+      "edit": "تعديل العميل",
+      "new": "عميل جديد",
+      "type": "النوع",
+      "firstName": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "cin": "رقم البطاقة الوطنية",
+      "companyName": "اسم الشركة",
+      "contactPerson": "الشخص المسؤول",
+      "taxNumber": "الرقم الضريبي",
+      "phone": "الهاتف",
+      "email": "البريد الإلكتروني",
+      "address": "العنوان",
+      "update": "تحديث العميل",
+      "create": "إنشاء العميل"
+    },
+    "type": {
+      "person": "شخص",
+      "company": "شركة"
+    },
+    "title": "إدارة العملاء",
+    "newCustomer": "عميل جديد",
+    "search": {
+      "label": "البحث عن العملاء",
+      "placeholder": "البحث بالاسم، البريد الإلكتروني، الهاتف..."
+    },
+    "tabs": {
+      "individual": "العملاء الأفراد",
+      "company": "عملاء الشركات"
+    },
+    "columns": {
+      "name": "الاسم",
+      "cin": "رقم البطاقة الوطنية",
+      "phone": "الهاتف",
+      "email": "البريد الإلكتروني",
+      "actions": "الإجراءات",
+      "companyName": "اسم الشركة",
+      "ice": "رقم التعريف الضريبي",
+      "contactPerson": "الشخص المسؤول"
+    },
+    "actions": {
+      "edit": "تعديل العميل",
+      "delete": "حذف العميل"
+    }
+  },
+  "orders": {
+    "form": {
+      "edit": "تعديل الطلب",
+      "new": "طلب جديد",
+      "customer": "العميل",
+      "date": "التاريخ",
+      "description": "الوصف",
+      "status": "الحالة",
+      "paymentMethod": "طريقة الدفع",
+      "items": {
+        "title": "العناصر",
+        "name": "الاسم",
+        "quantity": "الكمية",
+        "price": "السعر",
+        "add": "إضافة عنصر"
+      },
+      "update": "تحديث الطلب",
+      "create": "إنشاء الطلب"
+    },
+    "status": {
+      "completed": "completed",
+      "pending": "pending",
+      "cancelled": "cancelled"
+    },
+    "title": "إدارة الطلبات",
+    "searchPlaceholder": "البحث في الطلبات",
+    "searchHint": "البحث حسب العميل، التاريخ، الحالة...",
+    "filterByDate": "تصفية حسب التاريخ",
+    "startDate": "تاريخ البداية",
+    "endDate": "تاريخ النهاية",
+    "printAll": "طباعة جميع الطلبات",
+    "newOrder": "طلب جديد",
+    "individualOrders": "طلبات الأفراد",
+    "companyOrders": "طلبات الشركات",
+    "columns": {
+      "date": "التاريخ",
+      "customer": "العميل",
+      "paymentMethod": "طريقة الدفع",
+      "items": "العناصر",
+      "description": "الوصف",
+      "total": "المجموع",
+      "status": "الحالة",
+      "actions": "الإجراءات",
+      "company": "الشركة"
+    },
+    "actions": {
+      "print": "طباعة الفاتورة",
+      "view": "عرض الطلب",
+      "delete": "حذف الطلب"
+    }
+  },
+  "sidebar": {
+    "dashboard": "لوحة التحكم",
+    "orders": "الطلبات",
+    "customers": "العملاء",
+    "purchase": "المشتريات",
+    "cashDesk": "الصندوق",
+    "settings": "الإعدادات"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "todayRevenue": "إيرادات اليوم",
+    "activeOrders": "الطلبات النشطة",
+    "totalCustomers": "إجمالي العملاء",
+    "revenueTrend": "اتجاه الإيرادات"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "language": {
+      "title": "اللغة",
+      "select": "اختر اللغة",
+      "english": "الإنجليزية",
+      "french": "الفرنسية",
+      "arabic": "العربية"
+    },
+    "appearance": {
+      "title": "المظهر",
+      "darkMode": "الوضع الداكن"
+    },
+    "account": {
+      "title": "الحساب",
+      "changePassword": "تغيير كلمة المرور"
+    },
+    "backup": {
+      "title": "النسخ الاحتياطي",
+      "export": "تصدير قاعدة البيانات",
+      "import": "استيراد قاعدة البيانات"
+    }
+  },
+  "common": {
+    "cancel": "إلغاء"
+  }
+}
